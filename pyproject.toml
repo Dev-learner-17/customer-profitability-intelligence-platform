@@ -1,0 +1,18 @@
+[tool.ruff]
+# Exclude legacy and notebook directories from linting
+extend-exclude = [
+    "legacy",
+    "notebooks",
+    ".ipynb_checkpoints"
+]
+
+[tool.ruff.lint]
+# Ignore specific rules
+ignore = [
+    "BLE001",  # Do not catch blind exception `Exception`
+    "RUF012",  # Mutable default value for class attribute
+    "C408",    # Unnecessary dict call
+    "S110",    # try-except-pass
+    "LOG015",  # info() call on root logger
+    "RUF013"   # implicit Optional
+]

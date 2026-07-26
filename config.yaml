@@ -1,0 +1,17 @@
+project:
+  name: "Customer & Profitability Intelligence Platform"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  data_dir: "processed_data"
+  models_dir: "processed_data/ml/mlruns"
+  logs_dir: "logs"
+
+ml:
+  optuna_trials: 20
+  cv_folds: 5
+  eval_metric: "auc"
+
+financials:
+  tolerance_threshold: 0.05

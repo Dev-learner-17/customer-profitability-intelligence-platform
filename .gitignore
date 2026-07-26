@@ -1,0 +1,22 @@
+data/raw/
+processed_data/
+*.parquet
+*.zip
+
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.env
+.venv/
+*.pyc
+*.pyo
+*.log
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db
+
+# Extra folder excluded from git
+extra/
