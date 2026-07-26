@@ -15,28 +15,30 @@ def engineer_product_features(data_dir="processed_data"):
         return
 
     df = pd.read_parquet(p)
-    
+
     # 1. Base Metrics
-    df['Margin'] = np.where(df['Total_Sales'] > 0, df['Total_Profit'] / df['Total_Sales'], 0)
-    df['Profit_Density'] = df['Profit_Per_Unit'] # already exists
-    df['Volume_Contribution'] = df['Units_Sold'] / df['Units_Sold'].sum()
+    df["Margin"] = np.where(
+        df["Total_Sales"] > 0, df["Total_Profit"] / df["Total_Sales"], 0
+    )
+    df["Profit_Density"] = df["Profit_Per_Unit"]  # already exists
+    df["Volume_Contribution"] = df["Units_Sold"] / df["Units_Sold"].sum()
 
     # 2. Scaling for Index Creation
     scaler = MinMaxScaler()
-    df[['Margin_Scaled', 'Profit_Density_Scaled', 'Volume_Scaled']] = scaler.fit_transform(
-        df[['Margin', 'Profit_Density', 'Volume_Contribution']]
+    df[["Margin_Scaled", "Profit_Density_Scaled", "Volume_Scaled"]] = (
+        scaler.fit_transform(df[["Margin", "Profit_Density", "Volume_Contribution"]])
     )
 
     # 3. Product Efficiency Index (PEI)
     # PEI = 0.4*Margin + 0.3*Profit_Density + 0.3*Volume_Contribution
-    df['Product_Efficiency_Index'] = (
-        0.4 * df['Margin_Scaled'] + 
-        0.3 * df['Profit_Density_Scaled'] + 
-        0.3 * df['Volume_Scaled']
+    df["Product_Efficiency_Index"] = (
+        0.4 * df["Margin_Scaled"]
+        + 0.3 * df["Profit_Density_Scaled"]
+        + 0.3 * df["Volume_Scaled"]
     )
 
     # Clean up scaled columns
-    df = df.drop(columns=['Margin_Scaled', 'Profit_Density_Scaled', 'Volume_Scaled'])
+    df = df.drop(columns=["Margin_Scaled", "Profit_Density_Scaled", "Volume_Scaled"])
 
     # Save
     out_path = Path(data_dir) / "aggregations/product_agg_advanced.parquet"

@@ -4,7 +4,7 @@ import sys
 import plotly.express as px
 import streamlit as st
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from src.duckdb_layer import db
 
 st.set_page_config(page_title="ML Risk Engine", page_icon="🤖", layout="wide")
@@ -21,10 +21,20 @@ except Exception:
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Delivery Risk Inference")
-    fig1 = px.histogram(df_margin, x="Margin_Risk_Prob", template="plotly_dark", title="Delivery Risk Distribution")
+    fig1 = px.histogram(
+        df_margin,
+        x="Margin_Risk_Prob",
+        template="plotly_dark",
+        title="Delivery Risk Distribution",
+    )
     st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
     st.subheader("Customer LTV Inference")
-    fig2 = px.histogram(df_ltv, x="LTV_Prob", template="plotly_dark", title="High LTV Probability Distribution")
+    fig2 = px.histogram(
+        df_ltv,
+        x="LTV_Prob",
+        template="plotly_dark",
+        title="High LTV Probability Distribution",
+    )
     st.plotly_chart(fig2, use_container_width=True)

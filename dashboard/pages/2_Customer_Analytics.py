@@ -4,7 +4,7 @@ import sys
 import plotly.express as px
 import streamlit as st
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from src.duckdb_layer import db
 
 st.set_page_config(page_title="Customer Analytics", page_icon="👥", layout="wide")
@@ -20,10 +20,14 @@ except Exception:
 
 st.subheader("Customer Value Distribution")
 fig = px.scatter(
-    df, x="Total_Sales", y="Total_Profit", color="Segment",
-    size="Order_Count", hover_name="Customer ID",
+    df,
+    x="Total_Sales",
+    y="Total_Profit",
+    color="Segment",
+    size="Order_Count",
+    hover_name="Customer ID",
     template="plotly_dark",
-    title="Sales vs Profit by Customer Segment"
+    title="Sales vs Profit by Customer Segment",
 )
 st.plotly_chart(fig, use_container_width=True)
 
