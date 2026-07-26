@@ -1,0 +1,12 @@
+{
+    "initial_rows": 180519,
+    "initial_cols": 26,
+    "mem_before_mb": 162.33,
+    "dropped_duplicates": 0,
+    "dropped_missing": 0,
+    "financial_mismatches": 0,
+    "outliers_removed": 5497,
+    "outlier_method": "Z-score",
+    "final_rows": 175022,
+    "mem_after_mb": 13.04
+}

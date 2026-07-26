@@ -1,0 +1,18 @@
+{
+    "total_revenue_usd": 34305192.0,
+    "total_profit_usd": 5330545.0,
+    "profit_margin_pct": 15.5386,
+    "margin_zero_discount_pct": 18.8636,
+    "discount_impact_ratio_pct": 3.325,
+    "average_category_margin_pct": 15.7346,
+    "average_order_value_usd": 196.01,
+    "n_unique_customers": 19761,
+    "n_orders": 175022,
+    "benefit_per_order_total": 5330545.0,
+    "benefit_vs_profit_delta": 0.0,
+    "segment_discount_elasticity": {
+        "Consumer": -0.06888358163186915,
+        "Corporate": -0.06422814976678408,
+        "Home Office": -0.060599772182047644
+    }
+}

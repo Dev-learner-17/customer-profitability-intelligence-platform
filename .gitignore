@@ -1,6 +1,5 @@
 data/raw/
-processed_data/
-*.parquet
+processed_data/ml/mlruns/
 *.zip
 
 __pycache__/

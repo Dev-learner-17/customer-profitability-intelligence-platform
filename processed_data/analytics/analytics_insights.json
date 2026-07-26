@@ -1,0 +1,11 @@
+{
+    "pareto_pct": 34.89,
+    "rfm_distribution": {
+        "At Risk": 9791,
+        "Lost": 5030,
+        "Potential Loyalist": 4940
+    },
+    "revenue_at_risk_usd": 0.0,
+    "n_bleeders": 243,
+    "discount_profit_correlation": -0.066
+}

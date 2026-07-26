@@ -1,0 +1,58 @@
+{
+    "margin_risk_optuna_best_cv": 0.7708,
+    "margin_risk_best_params": {
+        "n_estimators": 599,
+        "max_depth": 4,
+        "learning_rate": 0.017878007489562416,
+        "min_samples_leaf": 22,
+        "subsample": 0.974408448101855,
+        "max_features": null
+    },
+    "margin_risk_shap_available": true,
+    "margin_risk_auc": 0.7692,
+    "margin_risk_cv_mean": 0.7708,
+    "margin_risk_cv_std": 0.0026,
+    "margin_risk_oot_auc": 0.7692,
+    "margin_risk_brier_score": 0.1798,
+    "margin_risk_feature_importance": {
+        "Shipping Mode": 1.6378706058699957,
+        "Order Status": 0.5593145821059818,
+        "disc_x_qty": 0.013954915773045955,
+        "Market": 0.011474099532158326,
+        "Order Item Discount Rate": 0.007752106154288175,
+        "Customer Segment": 0.00754645600511046,
+        "price_x_qty": 0.006592776179892814,
+        "Category Name": 0.0060820697156613165,
+        "Sales": 0.00559179952908605,
+        "log_price": 0.0047046907730900756
+    },
+    "margin_risk_model_type": "Delivery Risk Classifier (Late_delivery_risk target)",
+    "churn_risk_optuna_best_cv": 1.0,
+    "churn_risk_best_params": {
+        "n_estimators": 250,
+        "max_depth": 7,
+        "learning_rate": 0.10550756919226546,
+        "min_samples_leaf": 25,
+        "subsample": 0.6624074561769746,
+        "max_features": null
+    },
+    "churn_risk_auc": 1.0,
+    "churn_risk_cv_mean": 1.0,
+    "churn_risk_cv_std": 0.0,
+    "churn_risk_oot_auc": 1.0,
+    "churn_risk_brier_score": 0.0,
+    "churn_risk_feature_importance": {
+        "Monetary": 9.394474037812417,
+        "Total_Sales": 8.052384429396952,
+        "sales_per_order": 0.3138611595391346,
+        "Frequency": 0.008654120901874696,
+        "Order_Count": 0.0010813499745908589,
+        "Customer_Value_Index": 0.00020009490635430424,
+        "Recency": 0.0
+    },
+    "pipeline_version": "v2",
+    "ml_framework": "GradientBoostingClassifier (sklearn)",
+    "hpo_framework": "Optuna-TPE (40 trials)",
+    "explainability": "SHAP-TreeExplainer",
+    "mlflow_tracked": true
+}
