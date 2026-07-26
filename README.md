@@ -33,3 +33,25 @@ streamlit run dashboard/Home.py
 
 ## 📁 Repository Structure
 See `PROJECT_OVERVIEW.md` and `docs/` for deep technical documentation.
+
+## Repository Structure
+`	ext
+customer-profitability-intelligence-platform/
+├── dashboard/
+├── docs/
+│   ├── business/
+│   ├── presentation/
+│   └── research/
+├── legacy/
+├── logging/
+├── notebooks/
+├── pipelines/
+├── scripts/
+├── src/
+├── tests/
+├── .github/
+├── Dockerfile
+├── LICENSE
+├── pyproject.toml
+└── README.md
+`
