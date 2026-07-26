@@ -293,9 +293,11 @@ def load_all():
         except Exception:
             return pd.DataFrame()
 
-    with open(base / "macro_kpis.json") as f:
-        kpis = json.load(f)
-
+    kpis = {}
+    kpi_path = base / "macro_kpis.json"
+    if kpi_path.exists():
+        with open(kpi_path) as f:
+            kpis = json.load(f)
     insights = {}
     ins_path = base / "analytics" / "analytics_insights.json"
     if ins_path.exists():
